@@ -6,6 +6,7 @@
     let response = "";
 
     async function load() {
+        response = "";
         fetch("api/", {
             method: "GET",
             headers: {

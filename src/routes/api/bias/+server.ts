@@ -20,7 +20,8 @@ export async function POST({
    url, request
 }){
     const data = (await request.json()).data;
-console.log("IN DSADSADSADADDASDSA")
+
+    
     try{
         const res = await openai.createCompletion(
             {

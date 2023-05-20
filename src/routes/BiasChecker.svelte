@@ -5,6 +5,8 @@
     let response = "";
 
     async function load() {
+
+        response = ""
         fetch("api/bias/", {
             method: "POST",
             body: JSON.stringify({
