@@ -6,20 +6,6 @@ import { error } from "@sveltejs/kit";
 import type { RequestHandler, RouteParams } from "./$types"
 
 function makePrompt(char: CharInput) {
-    console.log("prompt", `
-    Suggest names for characters of a certain type. Suggest ${char.count} names in total.
-
-    Character type: Fantasy
-    Count: 4
-    Names: Luna, Helios, Estel, Gagriel
-
-    Character type: Super Hero
-    Count: 3
-    Names: Uber Man, The Thunder Smasher, Invisi-boy
-
-    Character type: ${char.charType}
-    Count: ${char.count}
-    Names:`)
     return `
     Suggest names for characters of a certain type. Suggest "Count" names in total.
 
@@ -46,13 +32,16 @@ export async function GET({
     try {
         const completion = await openai.createCompletion(
             {
-                model: "text-davinci-003",
+                model: "text-curie-001",
                 prompt: makePrompt({
                     charType: header.get("charType"),
                     count: header.get("count")
                 }),
 
                 temperature: 0.5,
+                max_tokens:50,
+                
+                
             }
         )
         console.log(completion.data)
