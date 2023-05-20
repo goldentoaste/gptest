@@ -1,7 +1,7 @@
 <script >
     let prompt =
         "Check if there are any misinformation in the following text. In less than 100 words.";
-    let temp = 0;
+    let temp = 0.4;
 
     let response = "";
 

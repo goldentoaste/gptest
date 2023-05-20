@@ -20,12 +20,11 @@ export async function POST({
                 model: "text-davinci-003",
                 prompt: prompt,
                 temperature: temp,
-                max_tokens:200,
+                max_tokens:1000,
                 best_of:1
             }
         )
 
-        console.log(res.data)
         return new Response(res.data.choices[0].text);
     }
     catch (err){
