@@ -8,16 +8,14 @@ import { error } from "@sveltejs/kit";
 
 
 
-export async function POST({
-   url, request
-}){
+export async function POST({request}){
     const json = (await request.json());
     const prompt = json.prompt
     const temp = json.temp
     try{
         const res = await openai.createCompletion(
             {
-                model: "text-davinci-003",
+                model: "text-davinci-002",
                 prompt: prompt,
                 temperature: temp,
                 max_tokens:1000,
