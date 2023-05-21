@@ -4,14 +4,19 @@
     import CustomPrompt from "./CustomPrompt.svelte";
 </script>
 
-<CustomPrompt />
+<!-- <CustomPrompt />
 <div style="width:auto; height:3px; background:blue; margin:3rem;" />
 
 <CharNamesGen />
 
 <div style="width:auto; height:3px; background:blue; margin:3rem;" />
 
-<BiasChecker />
+<BiasChecker /> -->
+
+
+Hey, its John. I just got a new number and Im having a hard time right now, can I borrow some money? <br/>
+Just buy me a few gift cards so I can spend it easier.
+
 
 ---
 
@@ -23,3 +28,12 @@
     successfully transferred into your account, you will be entitled to 40% of
     the total sum, which amounts to an astonishing $10,000,000!
 </p>
+
+
+<style>
+
+
+    p {
+        max-width: 500px;
+    }
+</style>
