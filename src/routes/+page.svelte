@@ -16,3 +16,11 @@ import CharNamesGen from "./CharNamesGen.svelte";
 <div style="width:auto; height:3px; background:blue; margin:3rem;"/>
 
 <BiasChecker></BiasChecker>
+
+
+
+---
+
+
+<p>
+</p>
